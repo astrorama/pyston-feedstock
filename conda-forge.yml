@@ -1,0 +1,26 @@
+github:
+  user_or_org: astrorama 
+
+channels:
+    targets:
+      - ["astrorama", "develop"]
+
+#build_platform:
+#  osx_arm64: osx_64
+
+test_on_native_only: true
+
+provider:
+  linux: azure
+  osx: azure
+  win: None
+
+azure:
+  store_build_artifacts: False
+
+recipe_dir: recipe
+skip_render:
+  - .github/CONTRIBUTING.md
+  - .github/ISSUE_TEMPLATE.md
+  - .github/PULL_REQUEST_TEMPLATE.md
+  - .github/workflows

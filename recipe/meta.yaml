@@ -1,0 +1,38 @@
+{% set name = "Pyston" %}
+{% set version = "0.1" %}
+{% set build_number = environ.get('GIT_DESCRIBE_NUMBER', '0') %}
+
+package:
+    name: {{ name|lower }}
+    version: {{ version }}
+
+source:
+    git_rev: develop
+    git_url: https://github.com/astrorama/pyston.git
+
+build:
+    number: {{ build_number }}
+
+requirements:
+    build:
+        - cmake >=3.0
+        - make
+        - {{ compiler('cxx') }}
+        - python                             # [build_platform != target_platform]
+        - cross-python_{{ target_platform }} # [build_platform != target_platform]
+    host:
+        - python
+        - boost
+        - elements ==5.12
+        - numpy
+    run:
+        - {{ pin_compatible('python', min_pin='x.x', max_pin='x.x') }}
+        - {{ pin_compatible('boost', min_pin='x.x', max_pin='x.x') }}
+        - numpy
+
+about:
+    home: https://github.com/astrorama/pyston
+    license: LGPLv3+
+    license_file: LICENSE
+    summary: Pyston is a "quick and dirty" C++ library that can be used to build kind-of AST leveraging the Python interpreter. 
+
