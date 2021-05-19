@@ -27,45 +27,59 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_python3.6.____cpython</td>
+              <td>linux_64_numpy1.17python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=7&branchName=master">
-                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.6.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.17python3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.7.____cpython</td>
+              <td>linux_64_numpy1.17python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=7&branchName=master">
-                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.7.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.17python3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.8.____cpython</td>
+              <td>linux_64_numpy1.17python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=7&branchName=master">
-                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.17python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.6.____cpython</td>
+              <td>linux_64_numpy1.19python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=7&branchName=master">
-                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.6.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.19python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.7.____cpython</td>
+              <td>osx_64_numpy1.17python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=7&branchName=master">
-                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.7.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.17python3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.8.____cpython</td>
+              <td>osx_64_numpy1.17python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=7&branchName=master">
-                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.17python3.7.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_numpy1.17python3.8.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=7&branchName=master">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.17python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_numpy1.19python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=7&branchName=master">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/pyston-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.19python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr>
@@ -90,6 +104,7 @@ Installing `pyston` from the `astrorama` channel can be achieved by adding `astr
 
 ```
 conda config --add channels astrorama
+conda config --set channel_priority strict
 ```
 
 Once the `astrorama` channel has been enabled, `pyston` can be installed with:
