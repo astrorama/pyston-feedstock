@@ -24,11 +24,9 @@ requirements:
         - python
         - boost
         - elements ==5.12
-        - numpy
     run:
         - {{ pin_compatible('python', min_pin='x.x', max_pin='x.x') }}
         - {{ pin_compatible('boost', min_pin='x.x', max_pin='x.x') }}
-        - {{ pin_compatible('numpy', min_pin='x.x', max_pin='x.x') }}
 
 about:
     home: https://github.com/astrorama/pyston
